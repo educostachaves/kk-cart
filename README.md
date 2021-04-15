@@ -1,8 +1,8 @@
-# ToDo App in NestJs and React
+# KK Cart API
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) BoltTech Challenge. Small aplication with Auth and ToDo features, built using NestJS and React (Hooks).
+[Nest](https://github.com/nestjs/nest) Kuanto Kusta Challenge. Small API for Cart Shopping.
 
 ## Installation
 
@@ -13,7 +13,6 @@ $ docker-compose up
 
 - For isolated services:
   - `docker-compose up app` For NestJs API
-  - `docker-compose up front` For React App
 
 - For manage database:
   - `docker-compose up postgres` PostgreSQL

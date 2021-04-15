@@ -1,11 +1,14 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { CartEntity } from '../../carts/entities/cart.entity';
-import { Column, Entity, ManyToOne, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity('product')
 export class ProductEntity {
+  @PrimaryGeneratedColumn()
+  readonly id: number;
+
   @ApiProperty()
-  @Column({ type: 'number' })
+  @Column({ type: 'int' })
   productId: number;
 
   @ApiProperty()
@@ -13,7 +16,7 @@ export class ProductEntity {
   price: number;
 
   @ApiProperty()
-  @Column({ type: 'number' })
+  @Column({ type: 'int' })
   quantity: number;
 
   @CreateDateColumn({ type: 'timestamp' })
